@@ -1,5 +1,5 @@
 <p>
-This folde contains the standardised GRYFN processing pipeline YAML files used within APPN for UAV-based data processing. These YAML configurations define consistent, transparent, and repeatable processing workflows across GRYFN-supported sensors and platforms, supporting reproducibility, quality assurance, and cross-project comparability. The files are intended to be used as reference and default templates for approved processing pipelines, with any deviations explicitly documented to maintain traceability and data integrity.
+This folder contains the standardised GRYFN processing pipeline YAML files used within APPN for UAV-based data processing. These YAML configurations define consistent, transparent, and repeatable processing workflows across GRYFN-supported sensors and platforms, supporting reproducibility, quality assurance, and cross-project comparability. The files are intended to be used as reference and default templates for approved processing pipelines, with any deviations explicitly documented to maintain traceability and data integrity.
 </p>
 
 <p>
