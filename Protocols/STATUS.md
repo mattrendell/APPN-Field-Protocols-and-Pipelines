@@ -31,7 +31,7 @@ Tick = stage complete. Update each page's `status:` list in [`publish.yaml`](../
 | [Spectral Panel Cleaning and Calibration](QA/SpectralPanel/Spectral_Panel_Cleaning_and_Calibration.md) | Quality Assurance | `1.00` | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | Current STUB- Draft being written |
 | [Plot Delineation](PlotProtocols/PlotDelineation/Plot_Delineation.md) | Plot Protocols | `1.00` | ✅ | ✅ | ✅ | ✅ | ✅ | The three delineation methods are still being cross-validated. |
 | [Data Folder Structure](DataManagement/DataFolderStructure/DataFolderStructure.md) | Data Management | `1.00` | ✅ | ✅ | ✅ | ✅ | ✅ |  |
-| [Processing Pipelines](Pipelines/ProcessingPipelines/Processing_Pipelines.md) | Processing & Data Products | `1.00` | ✅ | ✅ | ✅ | ✅ | ✅ |  |
+| [Processing Pipelines](Pipelines/GryfnProcessingPipeline/Gryfn_Processing_Pipeline.md) | Processing & Data Products | `1.00` | ✅ | ✅ | ✅ | ✅ | ✅ |  |
 | [M3M Processing Pipeline](Pipelines/M3MPipeline/M3M_Processing_Pipeline.md) | Processing & Data Products | `1.00` | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | Current STUB- Draft being written |
 | [HiRes Processing Pipeline](Pipelines/HiResPipeline/HiRes_Processing_Pipeline.md) | Processing & Data Products | `1.00` | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | Current STUB- Draft being written |
 
