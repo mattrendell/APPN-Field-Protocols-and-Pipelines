@@ -198,9 +198,9 @@ pages:
     wiki_page: HiRes-Processing-Pipeline
     title: "HiRes Processing Pipeline"
     category: Pipelines
-    status: []
+    status: [drafted, ewg_feedback, modified, approved, adopted]
     last_revised: "1.00"
-    notes: "Current STUB- Draft being written"
+    notes: "Method 2 is still being developed."
 
   - source: Protocols/Background/StandardDataProducts/Standard_Data_Products.md
     wiki_page: Standard-Data-Products
