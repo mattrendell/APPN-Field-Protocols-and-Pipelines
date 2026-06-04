@@ -737,18 +737,31 @@ Install the **Processing R Provider** plugin in QGIS:
 ![FIELDimageR functions installed in the R scripts folder](Plot_Delineation_media/image_37f8400f36f7.jpg)
 
 ### Generating the Plot Shapefile
-
 With FIELDimageR set up, you can now generate plot shapefiles from your
 aerial imagery.
 
 1. Load an image into QGIS. An RGB orthomosaic from a GRYFN drone is the
    easiest starting point.
 
-   ![Loaded RGB orthomosaic in QGIS](Plot_Delineation_media/image_d29caa3b45af.png)
+![Generating the plot shapefile in QGIS — step 1](Plot_Delineation_media/QGIS_img1.png)
+
+Now it’s important to inspect the plots and think about the plot boundaries. If we zoom into a plot and measure the width and the length we see the plot is ~ 10 meters by 1.5 meters. 
+
+![Generating the plot shapefile in QGIS — step 2](Plot_Delineation_media/QGIS_img2.png)
+It has 5 rows (2 buffer rows, 3 rows we want to capture in our plant boundary)
+
+![Generating the plot shapefile in QGIS — step 3](Plot_Delineation_media/QGIS_img3.png)
+For this plot (2025 USYD Sif Calibration) we know that field techs are not taking any measurements from buffers, and we have been told to assume that there is and edge effect. Therefore, we follow these buffer guidelines: 
+
+“APPN minimum buffer (working rule): 0.3 m from each plot end and 0.2 m from each plot side (across the drill direction), or the width of one row — whichever is larger.”
+
+Some quick measurments shown below that 0.2 meters may still include some of the buffer, so here we will us "the width of one row"
+
+![Generating the plot shapefile in QGIS — step 4](Plot_Delineation_media/QGIS_img4.png)
 
 2. Open the **fieldShape** module from the Processing Toolbox.
 
-   ![Opening the fieldShape module](Plot_Delineation_media/image_c9dce09dde41.png)
+![Generating the plot shapefile in QGIS — step 5](Plot_Delineation_media/QGIS_img5.png)
 
 3. Fill in the module parameters:
    - Number of **rows** and **columns**.
@@ -757,33 +770,46 @@ aerial imagery.
    - **Plot size**.
    - **Buffer** — essential for establishing a common analysis area by
      mitigating edge effects.
+> [!NOTE]
+> You can achieve fine plot delineation by playing with buffer or plot size and the corners. These methods have an element of trial and error in them and involve a lot of manual QC and tweaking.     
+
+![Generating the plot shapefile in QGIS — step 6](Plot_Delineation_media/QGIS_img6.png)
+
 
 4. Click **Run**.
 
-   ![Run button in the fieldShape module](Plot_Delineation_media/image_866350342e31.png)
+![Generating the plot shapefile in QGIS — step 7](Plot_Delineation_media/QGIS_img7.png)
 
 5. The plot shapefile will be generated.
 
-> [!NOTE]
-> Achieving a perfect fit usually takes some iteration on the corner
-> coordinates. (_TODO: improve this workflow._)
+It is now valuable to inspect the some plots and make sure that you are *mostly* not capturing any buffer rows. It’s likely some plots will not be perfect, that is fine, however as a rule of thumb you need to a clear chunk of plant material outside your plot segmentation. If in any plots your polygon captures the soil in between plots you must redo your plot delineation workflow 
+
+Here is an zoomed in section from the workflow above, where the buffer rows are excluded.
+![Generating the plot shapefile in QGIS — step 8](Plot_Delineation_media/QGIS_img8.png)
+
+Here is a (bad) example from an early iteration of the workflow where the buffer rows and some soil are clearly included. 
+![Generating the plot shapefile in QGIS — step 8](Plot_Delineation_media/QGIS_bad_eg.png)
+
 
 #### Save your settings
 
 Save your fieldShape settings before closing the tool — inputs will be
 wiped if FIELDimageR is closed.
+#### Save your settings
 
-![Saving fieldShape settings as JSON](Plot_Delineation_media/image_c93a421b9c73.png)
-
+Save your fieldShape settings before closing the tool — inputs will be
+wiped if FIELDimageR is closed.
 Use **Copy as JSON** and save the contents as a text file alongside the
 shapefile in the trial's `Plot_Layout` directory.
 
+![Generating the plot shapefile in QGIS — step 9](Plot_Delineation_media/QGIS_img9.png)
 ### Output
 
 The shapefile produced by FIELDimageR contains plots identified only by
 `fid`.
 
-![Plots identified by fid in the shapefile attribute table](Plot_Delineation_media/image_6bacd8c6405f.png)
+
+![Generating the plot shapefile in QGIS — step 10](Plot_Delineation_media/QGIS_img10.png)
 
 Attach trial metadata as described in
 [Joining Trial Information](#joining-trial-information), then save the
