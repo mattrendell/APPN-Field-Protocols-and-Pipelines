@@ -225,6 +225,8 @@ into GPT before running a job for the first time:
    > normal-sized boxes that cover the panel** rather than cherry-picking
    > small areas to get a neater ELM.
 
+   > [!IMPORTANT] make sure to note that the Y-axis in the top right box is showing radiance units and not raw counts (Should be obvious, ranges in the tens/hundreds vs thousands/tens of thousands)]
+
 6. Click **Submit**.
 
 ### CALViS outputs
@@ -297,6 +299,8 @@ The GOBI standard processing pipeline is defined by
 > [!NOTE]
 > The GOBI workflow closely mirrors the CALViS walkthrough above; only
 > the GOBI-specific differences are called out below.
+
+> [!IMPORTANT] You need to set RGB resolution based on your flight height (you can get this from Gryfn Flight Calculator). The value in this pipeline is a placeholder only. In future we will work towards a pipeline for a suite of popular altitudes with an appropriate RGB resolution value. 
 
 The GOBI processing worflow is very similar to the CALViS. The main difference is that there is no SWIR but there is RGB data. 
 
@@ -446,6 +450,7 @@ Import the standard GOBI pipeline YAML
 
    ![Selecting a VNIR ELM target panel](Gryfn_Processing_Pipeline_media/GOBI_ELM.png)
    
+   [!IMPORTANT] make sure to note that the Y-axis in the top right box is showing radiance units and not raw counts (Should be obvious, ranges in the tens/hundreds vs thousands/tens of thousands)]
 
 
 ### GOBI outputs
@@ -460,6 +465,6 @@ for the canonical specifications, file sizes, and software compatibility.
 | LiDAR Digital Surface Model (DSM) | `LiDAR_DSM.tif` | 8 cm (fixed) | GeoTIFF | Extent: VNIR scene |
 | LiDAR Digital Terrain Model (DTM) | `LiDAR_DTM.tif` | 1 m | GeoTIFF | Extent: processing extent |
 | Combined LiDAR Point Cloud | `LiDAR_CombinedPointCloud.las` | Native point spacing | LAS | Outliers removed during combination |
-| VNIR Orthomosaic | `VNIR_Orthomosaic.bin` | 4 cm (GSD-based) | ENVI (`.bin` + `.hdr`) | binning = 2, radiometric calibration applied |
-| RGB Orthomosaic | `RGB_Orthomosaic.tif` | 0.6 cm (fixed) | GeoTIFF | Feature-matching (SIFT) bundle adjustment applied |
+| VNIR Orthomosaic | `VNIR_Orthomosaic.bin` | (GSD-based) | ENVI (`.bin` + `.hdr`) | binning = 2, radiometric calibration applied |
+| RGB Orthomosaic | `RGB_Orthomosaic.tif` | Use Gryfn flight calculator | GeoTIFF | Feature-matching (SIFT) bundle adjustment applied |
 

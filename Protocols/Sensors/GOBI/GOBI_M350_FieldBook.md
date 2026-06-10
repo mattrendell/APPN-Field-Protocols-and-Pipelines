@@ -255,8 +255,7 @@ confidence in downstream data analysis across APPN operations.
    `10.0.65.2`.
 3. Navigate to the GOBI WebUI at `10.0.65.50`.
 4. Ensure a valid altitude is shown in the top-right corner of the WebUI
-   (~10–20 m error is acceptable). Typically, this will normalise to
-   ground elevation within 4–6 minutes.
+   (~10–20 m error is acceptable). (accurate position/elevation should be within ~30-60 seconds from power on)
 5. Name the mission, using the convention `YYYYMMDD_XXXX`
    (`YYYY` = year; `MM` = month; `DD` = day, must be 2 digits;
    `XXXX` = a short reference or abbreviation for the job).

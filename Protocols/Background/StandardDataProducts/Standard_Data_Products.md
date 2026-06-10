@@ -56,4 +56,4 @@ routinely generate multi-GB datasets.*
 
 | Product | Description | Typical resolution | Typical file size *(indicative)* | Format | Software compatibility |
 |---|---|---|---|---|---|
-| RGB Orthomosaic | High-resolution RGB orthorectified mosaic | ~0.6 cm (fixed) | ~30–70 MB per image (image every ~2 s by default) | GeoTIFF (`.tif`) | QGIS, ArcGIS, GDAL |
+| RGB Orthomosaic | High-resolution RGB orthorectified mosaic | Use Gryfn flight calculator | ~30–70 MB per image (image every ~2 s by default) | GeoTIFF (`.tif`) | QGIS, ArcGIS, GDAL |

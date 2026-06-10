@@ -141,6 +141,7 @@ analysis across APPN operations.
    directly to the IF1200 via the Herelink hotspot
    ([follow steps here](https://docs.inspiredflight.com/inspired-documentation/products/aircraft/if1200/operating-the-aircraft/wireless-connection-to-ground-station)).
 
+
 > [!IMPORTANT]
 > A USB-C to USB-C cable will **not** work for the QGC <-> IF1200 connection
 > — you must use a USB-A to USB-C cable.
@@ -222,7 +223,7 @@ analysis across APPN operations.
    speed over **5 m/s (~18 km/h)** should be recorded. Try to ensure the
    sun is ±20° of solar noon, approximately 2 hours before or after noon
    (**however**, this will depend on time of year and latitude — please
-   check [here](https://gml.noaa.gov/grad/solcalc/) if unsure).
+   check [here](https://www.suncalc.org/#/-30.3252,149.7855,9/2026.06.10/14:23/1/3) if unsure).
 
    > [!NOTE]
    > **To be confirmed by in-field testing:** solar noon is a moving target,
@@ -364,7 +365,7 @@ analysis across APPN operations.
      in the spectral dimension. For exposure setting the spectral graph
      should be the main focus, and the X-hair toggle at the top of the
      screen may be useful for selecting a brightly lit part of the scene.
-     Counts are on the y-axis with a max of 65,000, so 95% ≈ 61,750 counts.
+     For SWIR, counts are on the y-axis with a max of 65,000, so 95% ≈ 61,750 counts. For VNIR, counts are on the y-axis with a max of 4095 so 95% ≈ 3890 counts
      HSinsight works similarly, though it measures in intensity and so ~95%
      can be set directly.
    - [Example](https://www.youtube.com/watch?v=8DAJToJKQhw).
@@ -440,7 +441,7 @@ analysis across APPN operations.
    mission start.
 7. Perform a dynamic alignment procedure outside the polygon (a figure-8 and
    back-and-forth manoeuvre at take-off and landing) at a recommended speed
-   of **5 m/s**.
+   of **6 m/s**.
 8. Enable autonomous mission.
 9. Monitor UAV battery voltage/percentage in flight.
 10. Upon completion of mission, return the aircraft to **Position** flight
