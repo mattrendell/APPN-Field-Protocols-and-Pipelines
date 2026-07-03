@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../APPN-Field-Protocols-and-Pipelines.wiki"
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Quiet Light"
+	}
+}
